@@ -8,12 +8,12 @@ const postDefs = gql`
     updatedAt: String
   }
 
-  type Query {
+  extend type Query {
     getAllPosts: [Post]
     getPost(_id: ID): Post
   }
 
-  type Mutation {
+  extend type Mutation {
     addPost(data: postInput): Post
     updatePost(data: updatePostInput): Post
   }
